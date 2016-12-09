@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title><?=$this->name ?> - Testing2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title><?=$this->config['name']?> - <?=$this->title?></title>
 
-  <!-- CSS  -->
+  <!-- Fonts  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize -->
   <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- Font Awesome -->
+  <link href="static/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- App -->
+  <link href="static/css/style.css?v=1.2" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
