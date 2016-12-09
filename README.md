@@ -7,4 +7,5 @@ We've added a `examples` folder so you can easily get started with your new proj
 ## Credits
 * [SmartyPHP](https://github.com/smarty-php/smarty)
 * [PHP Caching Tutorial](https://www.addedbytes.com/articles/for-beginners/output-caching-for-beginners/)
+* [Zend Framework](https://framework.zend.com/apidoc/2.3/classes/Zend.Http.PhpEnvironment.RemoteAddress.html) 
 * [StackOverflow ;)](https://stackoverflow.com)
