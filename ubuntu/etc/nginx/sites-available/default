@@ -17,6 +17,16 @@ server {
         	root /usr/share/nginx/html;
     	}
 
+	location ~ /views/.*\.(php|phtml)$ {
+   		deny all;
+   		return 403;
+	}
+
+	location ~ /core/.*\.(php)$ {
+		deny all;
+		return 403;
+	}
+
     	location ~ \.php$ {
         	try_files $uri =404;
         	fastcgi_split_path_info ^(.+\.php)(/.+)$;
@@ -26,3 +36,23 @@ server {
         	include fastcgi_params;
     	}
 }
+
+
+# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+#server {
+#	listen 80;
+#	listen [::]:80;
+#
+#	server_name example.com;
+#
+#	root /var/www/example.com;
+#	index index.html;
+#
+#	location / {
+#		try_files $uri $uri/ =404;
+#	}
+#}
