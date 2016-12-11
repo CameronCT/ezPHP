@@ -9,7 +9,7 @@ class ezPHP {
 	protected $_config = array(
 		'secret'	=>		'default',
 		'cache'		=>		'true',
-		'cache_time'=>		600,
+		'cache_time'=>		2,
 		'minify'	=>		false,
 	);
 
@@ -24,8 +24,12 @@ class ezPHP {
 		else
 			$this->_config['secret'] = $secret;
 
+		require 'includes/Cache.php';
+		require 'includes/Host.php';
+		require 'includes/Minify.php';
+
 		spl_autoload_register(function ($class) {
-		    include 'plugins/' . $class . '.class.php';
+		    require 'plugins/' . $class . '.class.php';
 		});
 	}
 	
@@ -73,28 +77,12 @@ class ezPHP {
 		return $this->_vars['title']	= $value;
 	}
 
-	/*
-     *	TEMPLATE BLOCKS by CameronCT
-	 *	Simple Caching - By: https://www.addedbytes.com/articles/for-beginners/output-caching-for-beginners/
-	 */
-	public function blockStart($id) {
-		return $this;
-	}
-
-	public function blockEnd($id) {
-		return $this;
-	}
-
-	public function blockExtend($id, $view) {
-		return $this;
-	}
-
     /*
      *	PHP TEMPLATING ENGINE by CameronCT
 	 *	Simple Caching - By: https://www.addedbytes.com/articles/for-beginners/output-caching-for-beginners/
 	 */
 
-    public function render_cache($_script, $_file) {
+    public function _cache($_script, $_file) {
 		ob_start();
 		include $_script;
 	    $fp = fopen($_file, 'w'); 
@@ -112,24 +100,13 @@ class ezPHP {
 		if (file_exists($_local)) {
 			if ($this->_config['cache'] == true) {	
 
-				if (!session_id())
-					session_regenerate_id();
-
-				if (class_exists('RemoteAddress'))
-					$ip = RemoteAddress::getIpAddress();
-				else
-					$ip = $_SERVER['REMOTE_ADDR'];
-
-				if (!isset($_SESSION['sessID']))
-					$_SESSION['sessID']		=		hash('sha256', $ip . session_id() . $this->_config['secret']);
-
-				$_cache = $this->_dir['cache'] . DIRECTORY_SEPARATOR . $file . '.' . hash('sha256', $_SESSION['sessID'] . $this->_config['secret']) . '.php';
+				$_cache = $this->_dir['cache'] . DIRECTORY_SEPARATOR . Cache::address($file, $this->_config['secret']) . '.php';
 
 				if (file_exists($_cache) && time() - $this->_config['cache_time'] <= filemtime($_cache)) {
 					clearstatcache();
-					include($_cache);
+					readfile($_cache);
 				} else if (!file_exists($_cache) || time() - $this->_config['cache_time'] > filemtime($_cache)) {
-					$this->render_cache($_local, $_cache);
+					$this->_cache($_local, $_cache);
 				}
 			} else { 
 				require $this->_dir['views'] . DIRECTORY_SEPARATOR . $file . '.phtml';

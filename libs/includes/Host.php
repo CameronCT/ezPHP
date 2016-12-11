@@ -10,7 +10,7 @@
 /**
  * Functionality for determining client IP address.
  */
-class RemoteAddress
+class Host
 {
     /**
      * Whether to use proxy addresses or not.
