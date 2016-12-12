@@ -3,6 +3,9 @@ session_start();
 $time_start = microtime(true); 
 require_once('core/config.php');
 
+if (isset($_GET['clean']))
+	$ez->clearCache();
+
 $ez->title('Home');
 $ez->render('header');
 $ez->render('navigation');

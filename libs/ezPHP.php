@@ -100,7 +100,7 @@ class ezPHP {
 		if (file_exists($_local)) {
 			if ($this->_config['cache'] == true) {	
 
-				$_cache = $this->_dir['cache'] . DIRECTORY_SEPARATOR . Cache::address($file, $this->_config['secret']) . '.php';
+				$_cache = $this->_dir['cache'] . DIRECTORY_SEPARATOR . Cache::address($file) . '.php';
 
 				if (file_exists($_cache) && time() - $this->_config['cache_time'] <= filemtime($_cache)) {
 					clearstatcache();
@@ -112,6 +112,14 @@ class ezPHP {
 				require $this->_dir['views'] . DIRECTORY_SEPARATOR . $file . '.phtml';
 			}
 		} else throw new Exception('Template ' . $_local . ' could not be found!');
+	}
+
+	/*
+	 *	PHP CACHE
+	 *
+	 */
+	public function clearCache() {
+		return Cache::clean($this->_dir['cache']);
 	}
 
 }
