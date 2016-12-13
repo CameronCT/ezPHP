@@ -6,7 +6,7 @@ class CDN {
 
 	private static $_cache;
 
-	public static debug($v) {
+	public static function debug($v) {
 		 if ($v)
 		 	self::$_cache = '?v=' . bin2hex(random_bytes(10));
 		 else
@@ -18,7 +18,7 @@ class CDN {
 	}
 
 	public static function for($k, $v = false) {
-		if ($v) 
+		if (!$v) 
 			return self::$_url[$k];
 		else
 			return self::$_url[$k] . DIRECTORY_SEPARATOR . $v . self::$_cache;
