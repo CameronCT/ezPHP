@@ -47,7 +47,7 @@ $data = array(
 
 $ez->assign('data', $data);
 $ez->assign('config', $config);
-$ez->assign('name', 'Testing poop');
+$ez->assign('name', 'ezPHP');
 
 //$ez->debug();
 
