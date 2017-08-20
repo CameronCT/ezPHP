@@ -1,41 +1,22 @@
+    <!-- FOOTER -->
+      <footer>
+        <p class="float-right">This page loaded in <?=$this->load?> seconds.</p>
+        <p>&copy; 2017 <?=$this->config['name']?> &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
 
-  <footer class="page-footer light-blue">
-    <div class="container">
-      <div class="row">
-        <div class="col l10 s12">
-          <h5 class="white-text"><?=$this->config['name']?></h5>
-          <p class="grey-text text-lighten-4">I am a solo developer hoping to create the biggest and fastest next PHP template engine. Having been a developer for several years and acknowledging Smarty's existance through all of it. I am confident that I can build the fastest template engine!</p>
-
-
-        </div>
-        <div class="col l2 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="https://github.com/CameronCT">GitHub</a></li>
-            <li><a class="white-text" href="mailto:admin@nerdsthatcode.com">Email</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        &copy; <?=$this->config['name']?> 2016. Made by <a class="blue-text text-lighten-3" href="https://github.com/CameronCT/ezPHP" alt="GitHub"><i class="fa fa-github fa-lg"></i> CameronCT</a>
-        <span class="right">
-          <?=$this->load?> seconds
-        </span>
-      </div>
-    </div>
-  </footer>
+    </div><!-- /.container -->
 
 
-  <!-- jQuery -->
-  <script src="<?=CDN::for('static')?>/js/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="<?=CDN::for('static', '/js/jquery.min.js')?>"></script>
 
-  <!-- Materialize -->
-  <script src="<?=CDN::for('static')?>/js/materialize.js"></script>
+    <!-- Bootstrap v4 -->
+    <script src="<?=CDN::for('static', '/js/bootstrap.min.js')?>"></script>
 
-  <!-- App -->
-  <script src="<?=CDN::for('static')?>/js/init.js"></script>
+    <!-- Holder -->
+    <script src="<?=CDN::for('static', '/js/holder.min.js')?>"></script>
 
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="<?=CDN::for('static', '/js/ie10-viewport-bug-workaround.js')?>"></script>
   </body>
 </html>
