@@ -28,7 +28,6 @@ $config = array(
 CDN::add('static', '/ezPHP/static');
 URL::add('home', '/');
 
-$ez->assign('data', $data);
 $ez->assign('config', $config);
 $ez->assign('name', 'ezPHP');
 
