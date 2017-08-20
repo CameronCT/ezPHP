@@ -1,4 +1,4 @@
-# ezPHP [![Build Status](https://travis-ci.org/CameronCT/ezPHP.svg?branch=master)](https://travis-ci.org/CameronCT/ezPHP)
+# ezPHP [![Build Status](https://travis-ci.org/CameronCT/ezPHP.svg?branch=master)](https://travis-ci.org/CameronCT/ezPHP) [![Release](https://github.com/release/CameronCT/ezPHP.svg)](https://github.com/CameronCT/ezPHP) [![Downloads](https://github.com/downloads/CameronCT/ezPHP/total.svg)](https://github.com/CameronCT/ezPHP)
 ezPHP is a learning project that was inspired by the infamous [SmartyPHP](https://github.com/smarty-php/smarty) except utilizing the .phtml  files instead of .tpl as well as hoping to make a faster framework than Smarty.
 
 ## Getting Started
