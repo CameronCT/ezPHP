@@ -2,7 +2,7 @@
     "name": "ezphp/ezphp",
     "type": "library",
     "description": "Templating Engine for PHP",
-    "keywords": ["log","logging"],
+    "keywords": ["php","templating engine"],
     "homepage": "https://github.com/CameronCT/ezPHP",
     "license": "MIT",
     "authors": [
