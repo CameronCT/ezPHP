@@ -29,7 +29,7 @@ class ezPHP {
 		require 'includes/Minify.php';
 
 		spl_autoload_register(function ($class) {
-		    require 'plugins/' . $class . '.class.php';
+		    require 'plugins/' . $class . '.php';
 		});
 	}
 	
@@ -60,7 +60,10 @@ class ezPHP {
 	}
 
 	public function getConfig($conf) {
-		return $this->_config[$conf];
+		if ($conf != 'secret')
+			return $this->_config[$conf];
+		else
+			throw new Exception('Denied from using Secret key in public setting!');
 	}
 
 	public function getDir($dir) {
@@ -123,5 +126,3 @@ class ezPHP {
 	}
 
 }
-
-?>
