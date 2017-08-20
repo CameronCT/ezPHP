@@ -39,4 +39,3 @@ class CSRF {
 		self::generate();
 	}
 }
-?>

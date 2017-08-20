@@ -42,4 +42,3 @@ class ALERT {
 *	if (!ALERT::Validate())
 */
 }
-?>
