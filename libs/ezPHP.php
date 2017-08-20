@@ -60,7 +60,7 @@ class ezPHP {
 	}
 
 	public function getConfig($conf) {
-		if (!$this->_config['secret'])
+		if ($conf != 'secret')
 			return $this->_config[$conf];
 		else
 			throw new Exception('Denied from using Secret key in public setting!');
