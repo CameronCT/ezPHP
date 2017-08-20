@@ -9,3 +9,4 @@ install:
 
 script:
    - cd libs
+   - php autoload.php

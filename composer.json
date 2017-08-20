@@ -1,0 +1,24 @@
+{
+    "name": "ezphp/ezphp",
+    "type": "library",
+    "description": "Templating Engine for PHP",
+    "keywords": ["log","logging"],
+    "homepage": "https://github.com/CameronCT/ezPHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cameron Touchette",
+            "email": "contact@cameronct.com",
+            "homepage": "https://cameronct.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "ezPHP": "src"
+        }
+    }
+}
