@@ -1,17 +1,17 @@
 <p align="center">
-	<img src="https://cameronct.com/ezPHP/ezphp.png" alt="ezPHP Logo"/>
+  <img src="https://cameronct.com/ezPHP/ezphp.png" alt="ezPHP Logo"/>
   
-	<h3 align="center">ezPHP</h3>
+  <h3 align="center">ezPHP</h3>
   
-	<a href="https://travis-ci.org/CameronCT/ezPHP">
-		<img src="https://img.shields.io/travis/CameronCT/ezPHP.svg" />
-	</a>
-	<a href="https://github.com/CameronCT/ezPHP">
-		<img src="https://img.shields.io/github/release/CameronCT/ezPHP.svg" />
-	</a>
-	<a href="https://packagist.org/packages/ezphp/ezphp">
-		<img src="https://img.shields.io/packagist/v/ezphp/ezphp.svg" />
-	</a>
+  <a href="https://travis-ci.org/CameronCT/ezPHP">
+    <img src="https://img.shields.io/travis/CameronCT/ezPHP.svg" />
+  </a>
+  <a href="https://github.com/CameronCT/ezPHP">
+    <img src="https://img.shields.io/github/release/CameronCT/ezPHP.svg" />
+  </a>
+  <a href="https://packagist.org/packages/ezphp/ezphp">
+    <img src="https://img.shields.io/packagist/v/ezphp/ezphp.svg" />
+  </a>
 </p>
 
 ezPHP is a learning project that was inspired by the infamous [SmartyPHP](https://github.com/smarty-php/smarty) except utilizing the .phtml  files instead of .tpl as well as hoping to make a faster framework than Smarty.
