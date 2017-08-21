@@ -12,7 +12,6 @@
     <img src="https://img.shields.io/packagist/v/ezphp/ezphp.svg" />
   </a>
 </p>
-<h3 align="center">ezPHP</h3>
 
 ezPHP is a learning project that was inspired by the infamous [SmartyPHP](https://github.com/smarty-php/smarty) except utilizing the .phtml  files instead of .tpl as well as hoping to make a faster framework than Smarty.
 
