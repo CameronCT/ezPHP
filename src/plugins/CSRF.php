@@ -18,13 +18,13 @@ class CSRF {
 		}
 	}
 
-	public static function check() { 
-		if (isset($_SESSION[self::$_csrfName]) && isset($_POST['token'])) {
-			if ($_POST['token'] == $_SESSION[self::$_csrfName]) {
+	public static function check($name = 'csrf') { 
+		if (isset($_SESSION[self::$_csrfName]) && isset($_POST[$name])) {
+			if ($_POST[$name] == $_SESSION[self::$_csrfName]) {
 				return true;	
 			} else return false;
-		} else if (isset($_SESSION[self::$_csrfName]) && isset($_GET['token'])) {
-			if ($_GET['token'] == $_SESSION[self::$_csrfName]) {
+		} else if (isset($_SESSION[self::$_csrfName]) && isset($_GET[$name])) {
+			if ($_GET[$name] == $_SESSION[self::$_csrfName]) {
 				return true;
 			} else return false;
 		}
