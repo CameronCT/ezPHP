@@ -1,8 +1,7 @@
 <p align="center">
   <img src="https://cameronct.com/ezPHP/ezphp.png" alt="ezPHP Logo"/>
-  
-  <h3 align="center">ezPHP</h3>
-  
+</p>
+<p align="center">
   <a href="https://travis-ci.org/CameronCT/ezPHP">
     <img src="https://img.shields.io/travis/CameronCT/ezPHP.svg" />
   </a>
