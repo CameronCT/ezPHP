@@ -4,8 +4,6 @@ class ezPHP {
 
 	protected $_vars = array();
 
-	protected $_page = array();
-
 	protected $_config = array(
 		'secret'	=>		'default',
 		'cache'		=>		'true',
@@ -24,6 +22,8 @@ class ezPHP {
 		else
 			$this->_config['secret'] = $secret;
 
+		$this->_vars['page'] = 'main';
+
 		require 'includes/Cache.php';
 		require 'includes/Host.php';
 		require 'includes/Minify.php';
@@ -40,6 +40,10 @@ class ezPHP {
     public function assign($name, $value) {
     	$this->_vars[$name] = $value;
     }
+
+	public function page($name) {
+		$this->_vars['page'] = $name; 
+	}
 
     public function __get($name) {
         return $this->_vars[$name];
