@@ -18,6 +18,10 @@ class Session {
         $_SESSION[$k] = $v;
 	}
 
+    public static function get($k) {
+        return $_SESSION[$k];
+    }
+
 	public static function edit($k) {
 		$_SESSION[$k] = $v;
 	}
