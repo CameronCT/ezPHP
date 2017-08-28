@@ -1,6 +1,13 @@
 <?php
 
+/*
+ *  Pulls information about a User such as IP and MAC Address
+ */
 class Host {
+
+    /*
+     *  Grabs IP Address using Env Variables
+     */
     private static function getEnvIP() {
         $envIPAddress = '';
 		if (getenv('HTTP_CF_CONNECTING_IP'))
