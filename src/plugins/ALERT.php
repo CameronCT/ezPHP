@@ -1,44 +1,41 @@
 <?php
 class Alert {
-	
-	public static function use($type = $_SESSION) {
-		self::$_SESSION = $type;
-	}
 
 	public static function error($input) {	
-		self::$_SESSION['Error'] = $input;
+		$_SESSION['Error'] = $input;
 	}
 	
 	public static function success($input) {	
-		self::$_SESSION['Success'] = $input;
+		$_SESSION['Success'] = $input;
 	}
 
 	public static function warning($input) {	
-		self::$_SESSION['Warning'] = $input;
+		$_SESSION['Warning'] = $input;
 	}
 
 	public static function notice($input) {	
-		self::$_SESSION['Notice'] = $input;
+		$_SESSION['Notice'] = $input;
 	}
 
 	public static function Validate() {
-		if (isset(self::$_SESSION['Error']) && self::$_SESSION['Error'] != "")
+		if (isset($_SESSION['Error']) && $_SESSION['Error'] != "")
 			return false;
 		else
 			return true;
 	}
 
 	public static function check($alert) {
-		if (isset(self::$_SESSION[$alert]))
+		if (isset($_SESSION[$alert]))
 			return true;
 		else
 			return false;
 	}
 
 	public static function get($alert) {
-		if (isset(self::$_SESSION[$alert])) {
-			$var = self::$_SESSION[$alert];
-			unset(self::$_SESSION[$alert]);
+		if (isset($_SESSION[$alert])) {
+			$var = $_SESSION[$alert];
+			unset($_SESSION[$alert]);
 			return $var;
 		} else { return false; }
 	}
+}
