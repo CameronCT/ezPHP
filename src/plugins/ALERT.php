@@ -1,40 +1,46 @@
 <?php
 class ALERT {
+	
+	private static $_alertType = $_SESSION;
+
+	public static function use($type = $_SESSION) {
+		self::$_alertType = $type;
+	}
 
 	public static function error($input) {	
-		return $_SESSION['Error'] = $input;
+		self::$_alertType['Error'] = $input;
 	}
 	
 	public static function success($input) {	
-		return $_SESSION['Success'] = $input;
+		self::$_alertType['Success'] = $input;
 	}
 
 	public static function warning($input) {	
-		return $_SESSION['Warning'] = $input;
+		self::$_alertType['Warning'] = $input;
 	}
 
 	public static function notice($input) {	
-		return $_SESSION['Notice'] = $input;
+		self::$_alertType['Notice'] = $input;
 	}
 
 	public static function Validate() {
-		if (isset($_SESSION['Error']) && $_SESSION['Error'] != "")
+		if (isset(self::$_alertType['Error']) && self::$_alertType['Error'] != "")
 			return false;
 		else
 			return true;
 	}
 
 	public static function check($alert) {
-		if (isset($_SESSION[$alert]))
+		if (isset(self::$_alertType[$alert]))
 			return true;
 		else
 			return false;
 	}
 
 	public static function get($alert) {
-		if (isset($_SESSION[$alert])) {
-			$var = $_SESSION[$alert];
-			unset($_SESSION[$alert]);
+		if (isset(self::$_alertType[$alert])) {
+			$var = self::$_alertType[$alert];
+			unset(self::$_alertType[$alert]);
 			return $var;
 		} else { return false; }
 	}
