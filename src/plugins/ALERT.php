@@ -1,5 +1,5 @@
 <?php
-class ALERT {
+class Alert {
 	
 	public static function use($type = $_SESSION) {
 		self::$_SESSION = $type;
