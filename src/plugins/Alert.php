@@ -1,20 +1,20 @@
 <?php
-class ALERT {
+class Alert {
 
 	public static function error($input) {	
-		return $_SESSION['Error'] = $input;
+		$_SESSION['Error'] = $input;
 	}
 	
 	public static function success($input) {	
-		return $_SESSION['Success'] = $input;
+		$_SESSION['Success'] = $input;
 	}
 
 	public static function warning($input) {	
-		return $_SESSION['Warning'] = $input;
+		$_SESSION['Warning'] = $input;
 	}
 
 	public static function notice($input) {	
-		return $_SESSION['Notice'] = $input;
+		$_SESSION['Notice'] = $input;
 	}
 
 	public static function Validate() {
@@ -38,7 +38,4 @@ class ALERT {
 			return $var;
 		} else { return false; }
 	}
-/*
-*	if (!ALERT::Validate())
-*/
 }
