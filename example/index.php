@@ -6,7 +6,6 @@ require_once('core/config.php');
 if (isset($_GET['clean']))
 	$ez->clearCache();
 
-
 Session::add('User', 'Stuff');
 
 $ez->title('Home');
