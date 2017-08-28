@@ -25,7 +25,6 @@ class ezPHP {
 			$this->_config['secret'] = $secret;
 
 		require 'includes/Cache.php';
-		require 'includes/Host.php';
 		require 'includes/Minify.php';
 
 		spl_autoload_register(function ($class) {

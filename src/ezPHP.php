@@ -25,7 +25,6 @@ class ezPHP {
 		$this->_vars['page'] = 'main';
 
 		require 'includes/Cache.php';
-		require 'includes/Host.php';
 		require 'includes/Minify.php';
 
 		spl_autoload_register(function ($class) {
