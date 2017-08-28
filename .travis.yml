@@ -9,4 +9,4 @@ install:
 
 script:
    - cd src
-   - php autoload.php
+   - php ezPHP.php
