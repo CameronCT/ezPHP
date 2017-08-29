@@ -64,6 +64,13 @@ class Host {
 		}
     }
 
+	/*
+	 *	Grabs User Agent from Environmental Variables
+	 */
+	public static function getAgent() {
+		return getenv('HTTP_USER_AGENT');
+	}
+
     /*
      *  Support for people who are still using Zend's Host class and have a hard time switching
      */
