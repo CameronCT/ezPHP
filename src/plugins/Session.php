@@ -19,7 +19,10 @@ class Session {
 	}
 
     public static function get($k) {
-        return $_SESSION[$k];
+        if (isset($_SESSION[$k]))
+            return $_SESSION[$k];
+        else
+            return false;
     }
 
 	public static function edit($k) {
