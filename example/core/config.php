@@ -31,7 +31,7 @@ URL::add('home', '/');
 $ez->assign('config', $config);
 $ez->assign('name', 'ezPHP');
 
-//$ez->debug();
+//$ez->debug(); 
 
 
 ?>
