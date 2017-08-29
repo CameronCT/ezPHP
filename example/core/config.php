@@ -17,7 +17,7 @@ $ez->setDirs(array(
 $ez->setConfig(array(
 	'cache'				=>		true,
 	'cache_time'		=>		'2',
-	'minify'			=>		true,
+	'minify'			=>		false,
 ));
 
 $config = array(
@@ -25,7 +25,7 @@ $config = array(
 );
 
 //CDN::debug(true);
-CDN::add('static', '/ezPHP/static');
+CDN::add('static', '/static');
 URL::add('home', '/');
 
 $ez->assign('config', $config);
